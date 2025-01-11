@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="./Assets/images/rlogo.png" />
-  <title>Rhandzu Bakery</title>
+  <link rel="icon" type="image/svg+xml" href="./Assets/images/logo.png" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <title>Joy of praise Church</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./Assets/css/styles.css">
 </head>
 <body>
   <!-- Navigation -->
   <header class="navbar">
     <div class="logo">
-      <img src="./Assets//images/rlogo.png" alt="Bakery Logo">
+      <img src="./Assets//images/logo.png" alt="Joy Of Praise Logo">
     </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About Us</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#menu">Sermons</a></li>
+      <li><a href="#contact">Events</a></li>
+      <li><a href="#contact">Contact us</a></li>
+      
     </ul>
    
     <div class="burger-menu" onclick="toggleMenu()">
@@ -32,201 +36,118 @@
     <section class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
-                <h1>Welcome to Rhandzu Bakery</h1>
-                <p>Indulge in our freshly baked goods, crafted with love and the finest ingredients. Experience the taste of tradition.</p>
-                <a href="#menu" class="cta-button">Booking</a>
+                <h1>Welcome to Joy of Praise Church</h1>
+                <p>Psalms 66:2 <br>Sing to the glory of his name;offer him glorious praise!</p>
+                <div class="button-group">
+                    <a href="#services" class="btn btn-primary">Service Times</a>
+                    <a href="#membership" class="btn btn-primary">Become a Member</a>
+                </div>
             </div>
         </div>
     </section>
 
     <div class="container">
         <section class="about-section">
-            <section class="image-section">
-                <img src="./Assets/images/pexels-polina-tankilevitch-4109792.jpg" alt="Sweet Delights Bakery">
-            </section>
+            
             
             <section class="content-section">
-                <h1 class="title">Sweet Delights Bakery</h1>
+                <h1 class="title">JOIN US FOR A SERVICE</h1>
                 
                 <p class="description">
-                    Since 2010, Sweet Delights Bakery has been filling homes and hearts 
-                    with the warmth of freshly baked goods. Our story began with a simple 
-                    passion for creating delicious treats that bring people together. 
-                    Every day, our master bakers craft artisanal breads, pastries, and 
-                    cakes using time-honored recipes and the finest ingredients.
+                  Sunday service @ 10am-12pm
+                  <br><br>
+                  Praise, Please arrive early for a morning prayer which starts at 8:30am, foundational 
+                  class @ 09:00am and Intercession @ 09:30 till the service start
                 </p>
 
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">Fresh Daily</div>
-                        <div class="stat-label">Baked Every Morning</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5:00 AM</div>
-                        <div class="stat-label">First Batch Ready</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">Local Best</div>
-                        <div class="stat-label">3 Years Running</div>
-                    </div>
-                </div>
-
-                <button class="mission-btn" onclick="openModal()">Our Mission</button>
+          
+            
+                <h1>Find Us Here!</h1>
+                <div id="map"></div>
+                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+               
             </section>
         </section>
     </div>
-
-    <!-- Modal -->
-    <div id="missionModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2 class="modal-title">Our Mission</h2>
-            <p class="modal-text">
-                At Sweet Delights Bakery, our mission is to create moments of joy 
-                through the art of baking. We believe in preserving traditional 
-                baking methods while embracing innovation to deliver exceptional 
-                quality and taste. Our commitment extends beyond just baking – 
-                we strive to be a warm, welcoming place where community members 
-                can gather and create lasting memories over fresh-baked goods.
-            </p>
-            <div class="values-list">
-                <h3>Our Values:</h3>
-                <ul>
-                    <li>Quality ingredients, no compromises</li>
-                    <li>Traditional recipes with modern twists</li>
-                    <li>Sustainable and local sourcing</li>
-                    <li>Community-focused approach</li>
-                </ul>
+<!-- Vision and Mission Section -->
+<section id="vision-mission" class="vision-mission">
+    <div class="container">
+        <h2>Our Vision and Mission</h2>
+        <div class="card-container">
+            <!-- Vision Card -->
+            <div class="card">
+                <img src="./Assets/images/j5.jpg" alt="Our Vision" class="card-img">
+                <h3>Our Vision</h3>
+                <p>To create a Christ-centered community where everyone feels loved, valued, and empowered to grow spiritually and serve others.</p>
+            </div>
+            <!-- Mission Card -->
+            <div class="card">
+                <img src="./Assets/images/j1.jpg" alt="Our Mission" class="card-img">
+                <h3>Our Mission</h3>
+                <p>To spread the teachings of Christ, foster spiritual growth, and engage in acts of service that transform lives and communities.</p>
             </div>
         </div>
     </div>
+</section>
+  
   
 
-    <section class="menuu">
-        <div class="menu-container">
-            <h1 class="menu-title">Our Menu</h1>
 
-            <section class="menu-section">
-                <h2 class="menu-section-title">Breads</h2>
-                <div class="card-grid">
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-pixabay-162846.jpg" alt="Sourdough Loaf">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Sourdough Loaf</span>
-                            <p class="menu-item-description">Traditional sourdough with a crispy crust and soft interior.</p>
-                            <span class="menu-item-price">$5.00</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-pixabay-209206.jpg" alt="Multigrain Bread">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Multigrain Bread</span>
-                            <p class="menu-item-description">Packed with seeds and grains, perfect for a healthy meal.</p>
-                            <span class="menu-item-price">$6.00</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-monserratsoldu-600620.jpg" alt="Baguette">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Baguette</span>
-                            <p class="menu-item-description">Classic French baguette, golden and crusty on the outside.</p>
-                            <span class="menu-item-price">$3.50</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <section class="menu-section">
-                <h2 class="menu-section-title">Pastries</h2>
-                <div class="card-grid">
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-pixabay-267308.jpg" alt="Croissant">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Croissant</span>
-                            <p class="menu-item-description">Flaky and buttery, made with authentic French ingredients.</p>
-                            <span class="menu-item-price">$2.50</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-isaw-company-66472-1005406.jpg" alt="Chocolate Croissant">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Chocolate Croissant</span>
-                            <p class="menu-item-description">Delicious croissant filled with rich, dark chocolate.</p>
-                            <span class="menu-item-price">$3.00</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-polina-tankilevitch-4109781.jpg" alt="Danish Pastry">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Danish Pastry</span>
-                            <p class="menu-item-description">Sweet pastry filled with fruit or custard, topped with glaze.</p>
-                            <span class="menu-item-price">$3.00</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <section class="menu-section">
-                <h2 class="menu-section-title">Cakes</h2>
-                <div class="card-grid">
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-polina-tankilevitch-4109781.jpg" alt="Classic Cheesecake">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Classic Cheesecake</span>
-                            <p class="menu-item-description">Rich and creamy cheesecake with a graham cracker crust.</p>
-                            <span class="menu-item-price">$20.00</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-polina-tankilevitch-4109781.jpg" alt="Chocolate Fudge Cake">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Chocolate Fudge Cake</span>
-                            <p class="menu-item-description">Decadent chocolate cake with layers of fudge frosting.</p>
-                            <span class="menu-item-price">$22.00</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-polina-tankilevitch-4109781.jpg" alt="Red Velvet Cake">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Red Velvet Cake</span>
-                            <p class="menu-item-description">Moist red velvet cake with a hint of cocoa and cream cheese frosting.</p>
-                            <span class="menu-item-price">$24.00</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>JOIN US</h4>
+      <p>Sundays at 10:00am & 12:00pm</p>
+      <h4>SOCIAL NETWORKS</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      
+    </div>
 
-            <section class="menu-section">
-                <h2 class="menu-section-title">Cookies</h2>
-                <div class="card-grid">
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-polina-tankilevitch-4109781.jpg" alt="Chocolate Chip Cookie">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Chocolate Chip Cookie</span>
-                            <p class="menu-item-description">Classic cookie filled with gooey chocolate chips.</p>
-                            <span class="menu-item-price">$1.50</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-polina-tankilevitch-4109781.jpg" alt="Oatmeal Raisin Cookie">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Oatmeal Raisin Cookie</span>
-                            <p class="menu-item-description">Chewy cookie with oats and sweet raisins.</p>
-                            <span class="menu-item-price">$1.50</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <img src="./Assets/images/pexels-polina-tankilevitch-4109781.jpg" alt="Macadamia Nut Cookie">
-                        <div class="menu-card-content">
-                            <span class="menu-item-name">Macadamia Nut Cookie</span>
-                            <p class="menu-item-description">Soft and buttery, filled with macadamia nuts and white chocolate.</p>
-                            <span class="menu-item-price">$2.00</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            </div>
-    </section>
+    <div class="footer-section">
+      <h4>GET CONNECTED</h4>
+      <ul>
+        <li><a href="#">Register & be a member</a></li>
+        <li><a href="#">Volunteer</a></li>
+        <li><a href="#">Get Baptized</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>ABOUT US</h4>
+      <ul>
+        <li><a href="#">Service Times</a></li>
+        <li><a href="#">Location</a></li>
+        <li><a href="#">Home Services Request</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+  
+
+    <div class="footer-section">
+      <h4>RESOURCE LINKS</h4>
+      <ul>
+        <li><a href="#">Give</a></li>
+        <li><a href="#">Prayer Requests</a></li>
+        <li><a href="#">The Connection</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>
+      JOP Church// Corner Ruben and Armstrong Street,Vanderbjlpark CW3 // Phone: +27 61 541 2607<br>
+      Copyright &copy; 2025 Joy Of Praise Church. All rights reserved.
+    </p>
+  </div>
+</footer>
     
   
   <script src="./Assets/javascript/script.js"></script>

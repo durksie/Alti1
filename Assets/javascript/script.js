@@ -27,3 +27,16 @@ window.addEventListener('click', function(event) {
         modal.style.display = 'none';
     }
 });
+
+// Initialize the map
+const map = L.map('map').setView([-26.701013, 27.837725], 15); // Coordinates for Ruben & Armstrong Street
+
+// Add OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Add a marker at the specified location
+const marker = L.marker([-26.701013, 27.837725]).addTo(map);
+marker.bindPopup('<b>Corner Ruben and Armstrong Street</b><br>Vanderbijl CW3, Gauteng').openPopup();
